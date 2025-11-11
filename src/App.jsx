@@ -17,7 +17,7 @@ const App = () => {
                 <Route path="/directors" element={<DirectorContainer/>}>
                     <Route index element={<DirectorList/>} />
                     <Route path="new" element={<DirectorForm/>} />
-                    <Route path="id" element={<DirectorCard/>}>
+                    <Route path=":id" element={<DirectorCard/>}>
                         <Route path="movies/new" element={<MovieForm/>} />
                         <Route path="movies/:movieId" element={<MovieCard/>} />
                     </Route>
