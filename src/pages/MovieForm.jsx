@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
+import { useNavigate } from "react-router-dom"
 
 function MovieForm() {
   const [title, setTitle] = useState("")
   const [time, setTime] = useState("")
   const [genres, setGenres] = useState("")
+  const navigate = useNavigate();
 
   // Replace me
   const director = null
@@ -34,6 +36,7 @@ function MovieForm() {
       console.log(data)
       // handle context/state changes
       // navigate to newly created movie page
+      navigate(`movies/${newMovie.id}`)
     })
     .catch(console.log)
   }
