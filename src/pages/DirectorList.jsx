@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
+import { createContext } from "react";
+
+export const DirectorContext = createContext(null);
 
 const DirectorList = () => {
-    // Replace me
     const {directors} = useOutletContext();
 
     const displayDirectors = directors.map(d => (
@@ -10,9 +12,11 @@ const DirectorList = () => {
     ))
 
     return (
+        <DirectorContext.Provider value={directors}>
         <ul>
             {displayDirectors}
         </ul>
+        </DirectorContext.Provider>
     );
 }
 

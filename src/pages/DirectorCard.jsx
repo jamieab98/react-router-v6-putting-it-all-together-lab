@@ -1,8 +1,10 @@
 import { Outlet, Link } from "react-router-dom"
+import { useContext } from "react"
+import { DirectorContext } from "./DirectorList"
 
 function DirectorCard() {
-    // Replace me
-    const director = null
+    const directors = useContext(DirectorContext)
+    const director = ""
 
     if (!director) {
         return <h2>Director not found.</h2>
