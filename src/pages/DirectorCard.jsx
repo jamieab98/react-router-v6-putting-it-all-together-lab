@@ -1,16 +1,17 @@
 import { Outlet, Link } from "react-router-dom"
-import { useContext } from "react"
-import { DirectorContext } from "./DirectorList"
+import { useParams, useOutletContext } from "react-router-dom"
 
 function DirectorCard() {
-    const directors = useContext(DirectorContext)
-    const director = ""
+    const {directors} = useOutletContext()
+    const {id} = useParams();
+    const director = directors.find(d => d.id.toString() === id);
 
     if (!director) {
         return <h2>Director not found.</h2>
     }
 
     return (
+        
         <div>
         <h2>{director.name}</h2>
         <p>{director.bio}</p>
@@ -22,9 +23,12 @@ function DirectorCard() {
             </li>
             ))}
         </ul>
+        
         {/* Movie compoenents should render here depending on route */}
         <Outlet />
         </div>
+        
+        
     )
 }
 
