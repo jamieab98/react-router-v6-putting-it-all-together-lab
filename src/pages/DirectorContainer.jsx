@@ -13,6 +13,7 @@ const DirectorContainer = () => {
         })
         .then((data) => {
             setDirectors(data);
+            console.log(data)
         })
         .catch(console.log)
     }, [])
