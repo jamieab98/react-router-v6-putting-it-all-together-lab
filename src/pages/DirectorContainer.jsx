@@ -27,9 +27,7 @@ const DirectorContainer = () => {
                 <Link to = "new">New Director</Link> |{" "}
                 <Link to = ":id">Director</Link>
                 {/* all director components should render here depending on route */}
-                <DirectorContext.Provider value={{directors}}>
-                    <Outlet />
-                </DirectorContext.Provider>
+                <Outlet context={{directors}}/>
             </main>
         </>
     );
