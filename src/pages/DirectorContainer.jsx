@@ -1,8 +1,7 @@
-import { useEffect, useState, createContext } from 'react';
+import { useEffect, useState} from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
-export const DirectorContext = createContext(null);
 
 const DirectorContainer = () => {
     const [directors, setDirectors] = useState([])
