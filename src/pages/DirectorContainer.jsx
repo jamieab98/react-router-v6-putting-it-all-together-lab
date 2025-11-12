@@ -11,7 +11,10 @@ const DirectorContainer = () => {
             if (!r.ok) { throw new Error("failed to fetch directors") }
             return r.json()
         })
-        .then(setDirectors)
+        .then((data) => {
+            setDirectors(data);
+            console.log(data)
+        })
         .catch(console.log)
     }, [])
 
@@ -21,7 +24,7 @@ const DirectorContainer = () => {
             <main>
                 <h1>Welcome to the Director's Directory!</h1>
                 <Link to = "new">New Director</Link> |{" "}
-                <Link to = "id">Director</Link>
+                <Link to = ":id">Director</Link>
                 {/* all director components should render here depending on route */}
                 <Outlet />
             </main>
