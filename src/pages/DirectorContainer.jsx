@@ -13,7 +13,6 @@ const DirectorContainer = () => {
         })
         .then((data) => {
             setDirectors(data);
-            console.log(data)
         })
         .catch(console.log)
     }, [])
@@ -25,7 +24,7 @@ const DirectorContainer = () => {
                 <h1>Welcome to the Director's Directory!</h1>
                 <Link to = "new">New Director</Link>
                 {/* all director components should render here depending on route */}
-                <Outlet context={{directors}}/>
+                <Outlet context={directors}/>
             </main>
         </>
     );

@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom"
 import { useParams, useOutletContext } from "react-router-dom"
 
 function DirectorCard() {
-    const {directors} = useOutletContext()
+    const directors = useOutletContext()
     const {id} = useParams();
     const director = directors.find(d => d.id.toString() === id);
 
