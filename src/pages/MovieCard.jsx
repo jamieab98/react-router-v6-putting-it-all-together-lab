@@ -2,10 +2,8 @@ import { useOutletContext } from "react-router-dom"
 import { useParams } from "react-router-dom";
 
 function MovieCard() {
-  // Replace director and movie
   const director = useOutletContext();
   const { movieId } = useParams()
-  console.log(movieId)
 
   const movie = director.movies.find(film => film.id === movieId)
 

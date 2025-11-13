@@ -125,6 +125,68 @@
       "name": "Damien",
       "bio": "He need napkins",
       "movies": []
+    },
+    {
+      "id": "2ca2",
+      "name": "Jamie",
+      "bio": "Not quick enough for Storm",
+      "movies": [
+        {
+          "id": "52c9cbf2-ba26-49d2-b9c7-2c7d58eaaace",
+          "title": "Jamie v Storm. Too Fast; Too Furious about getting cut",
+          "time": 49,
+          "genres": [
+            "Action"
+          ]
+        },
+        {
+          "id": "4829e733-463e-4528-bd85-e6fa87b76a54",
+          "title": "Jamie v Storm: The Man they Needed",
+          "time": 2021,
+          "genres": [
+            "Biography"
+          ]
+        },
+        {
+          "id": "defc484e-25c4-4f22-88e5-0710fe3b36a5",
+          "title": "Jamie V Storm: The Breakup",
+          "time": 2025,
+          "genres": [
+            "Horror",
+            "Romance"
+          ]
+        },
+        {
+          "id": "760f0fb7-9b19-4c72-9f76-d94504ed7584",
+          "title": "Jamie v Toro: Limbo",
+          "time": 2025,
+          "genres": [
+            "Action",
+            "Suspense",
+            "Romance"
+          ]
+        },
+        {
+          "id": "2a38989d-3a2e-490c-8fba-031bed1bc8af",
+          "title": "Jamie v Conspiracy: The Accidental Fulfilled Prophecy",
+          "time": 2025,
+          "genres": [
+            "Action",
+            "Adventure"
+          ]
+        },
+        {
+          "id": "cfd43206-ce8d-43dd-99d1-60aab970d6fe",
+          "title": "Jamie v Toro: The Return and Establishment",
+          "time": 2026,
+          "genres": [
+            "Happy Ending",
+            "Action",
+            "Adventure",
+            "Suspense"
+          ]
+        }
+      ]
     }
   ]
 }

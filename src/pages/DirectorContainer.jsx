@@ -15,7 +15,7 @@ const DirectorContainer = () => {
             setDirectors(data);
         })
         .catch(console.log)
-    }, [])
+    }, [directors])
 
     return (
         <>
