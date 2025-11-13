@@ -21,9 +21,6 @@ function DirectorForm() {
         return r.json()
     })
     .then(data => {
-        console.log(data)
-        // handle context/state changes
-        // navigate to newly created director page
         navigate(`/directors/${data.id}`)
     })
     .catch(console.log)
