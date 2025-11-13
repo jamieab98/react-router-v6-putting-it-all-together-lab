@@ -6,6 +6,8 @@ function DirectorCard() {
     const {id} = useParams();
     const director = directors.find(d => d.id.toString() === id);
 
+    
+
     if (!director) {
         return <h2>Director not found.</h2>
     }
@@ -19,13 +21,14 @@ function DirectorCard() {
         <ul>
             {director.movies.map((movie) => (
             <li key={movie.id}>
-                <Link to = {`movies/:${movie.id}`}>{movie.title}</Link>
+                <Link to = {`movies/${movie.id}`}>{movie.title}</Link>
             </li>
             ))}
         </ul>
         
         {/* Movie compoenents should render here depending on route */}
-        <Outlet />
+        <Link to = 'movies/new'>New Movie</Link>
+        <Outlet context={director}/>
         </div>
         
         
